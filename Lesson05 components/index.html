@@ -1,0 +1,33 @@
+<!--component
+定义页面的局部区域块，完成单独的页面小功能-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson05</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="myApp">
+		<ol>
+			<game-item v-for="item in games" v-bind:game="item"></game-item>
+		</ol>
+	</div>
+	<script>
+		Vue.component('game-item', {
+			props: ['game'],
+			template: '<li>{{ game.title }}</li>'
+		});
+
+		var myApp = new Vue({
+			el: '#myApp',
+			data: {
+				games: [
+				{ title: '斗地主' },
+      			{ title: '打麻雀' },
+      			{ title: 'UNO' }
+				]
+			}
+		});
+	</script>
+</body>
+</html>

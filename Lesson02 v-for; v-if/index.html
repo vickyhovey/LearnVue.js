@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson02</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="myApp">
+		<h3>Stock List</h3>
+		<div v-if="seen">New on the Market</div>
+		<ol>
+			<li v-for="stock in stocks">{{ stock.name }} / {{ stock.price }}</li>
+		</ol>
+	</div>
+	<script>
+		var myApp = new Vue({
+			el: '#myApp',
+			data: {
+				seen: true,
+				stocks: [
+					{name: 'GSPC', price: '5000'},
+					{name: 'DJI', price: '3453'},
+					{name: 'CME', price: '23524'}
+				],
+			},
+		});
+	</script>
+</body>
+</html>

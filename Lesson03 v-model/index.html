@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson03</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="myApp">
+		<p>My favorite game is {{ mygame }}</p>
+		<input v-model="mygame">
+	</div>
+	<script>
+		var myApp = new Vue({
+			el: '#myApp',
+			data: {
+				mygame: 'Super Mario'
+			},
+		});
+	</script>
+</body>
+</html>
