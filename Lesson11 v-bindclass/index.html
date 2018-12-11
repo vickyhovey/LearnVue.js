@@ -1,0 +1,31 @@
+<!-- v-bind:class
+为html标记绑定样式单class对象。 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson11</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="myApp">
+    <div :class="myClass">红色文本</div>
+    <button @click="btnClick">改变class吧</button>
+	</div>
+	<script>
+    	var myApp = new Vue({
+        	el: '#myApp',
+        	data: {
+            	myClass: {
+                	active: true,
+                	big: true,
+            	},
+        	},
+        	methods: {
+            	btnClick: function(){
+                	this.myClass.big = false;
+            	},
+        	},
+    	});
+</script>
+</body>
+</html>
