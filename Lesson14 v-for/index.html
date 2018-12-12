@@ -1,0 +1,29 @@
+<!--v-for
+循环数组元素，整理内容显示到页面上。 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson14</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="myApp">
+		<ul>
+			<li v-for="(game, index) in games">({{index}}) {{game.title}} / Price: {{game.price}}RMB</li>
+		</ul>
+	</div>
+	<script>
+		var myApp = new Vue({
+			el: '#myApp',
+			data: {
+				games: [
+					{title:"勇者斗恶龙",price:500},
+                	{title:"库跑卡丁车",price:400},
+                	{title:"马里奥世界",price:550},
+				],
+			},
+		});
+	</script>
+
+</body>
+</html>
