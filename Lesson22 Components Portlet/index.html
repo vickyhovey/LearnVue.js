@@ -1,0 +1,24 @@
+<!-- 组件：基础的基础
+组件（Component,Portlet）
+组件
+组件就是页面上的一小块区域内容，完成一个小的页面功能 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson22</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="myApp">
+		<today-weather></today-weather>
+	</div>
+	<script>
+		Vue.component('today-weather', {
+			template: '<div>今天下雨，出不去啦，干什么呢？看Youtube吧!</div>'
+		});	
+	var myApp = new Vue({
+		el: '#myApp',
+	});
+	</script>
+</body>
+</html>
