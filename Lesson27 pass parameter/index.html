@@ -1,0 +1,30 @@
+<!-- 组件：传递变量
+为组件传递变量数据
+组件的数据
+制作可接受变量参数的组件。 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lesson27</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="myApp">
+		<div>请输入您的名字：<input v-model="myname"></div>
+		<hr/>
+		<say-hello :pname="myname" />
+	</div>
+	<script>
+		Vue.component('say-hello', {
+			props: ['pname'],
+			template: '<div>你好，<strong>{{pname}}</strong>！</div>',
+		});
+		var myApp = new Vue({
+			el: '#myApp',
+			data: {
+				myname: 'Koma'
+			}
+		});
+	</script>
+</body>
+</html>
